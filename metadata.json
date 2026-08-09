@@ -1,0 +1,6 @@
+{
+  "name": "Скульптура",
+  "description": "High-end tattoo studio in Moscow — Скульптура",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
