@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowRight, ArrowDown } from 'lucide-react';
 import { STUDIO_IMAGES, STUDIO_INFO } from '../data/studioData';
+import { LogoIcon } from './LogoIcon';
 
 interface HeroSectionProps {
   onOpenBooking: () => void;
@@ -32,10 +33,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       {/* Hero Content Container */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 md:px-12 pt-28 pb-16 min-h-screen flex flex-col justify-between">
         <div className="my-auto max-w-2xl pt-12 md:pt-20">
-          {/* Tag above title */}
-          <p className="text-[11px] md:text-xs tracking-[0.35em] uppercase text-neutral-400 font-sans-clean mb-4 md:mb-6">
-            {STUDIO_INFO.heroTag}
-          </p>
+          {/* Emblem Icon and Tag above title */}
+          <div className="flex items-center space-x-3 mb-4 md:mb-6">
+            <div className="w-8 h-8 md:w-10 md:h-10 text-white/90">
+              <LogoIcon className="w-full h-full text-white" />
+            </div>
+            <span className="w-8 h-[1px] bg-white/30"></span>
+            <p className="text-[11px] md:text-xs tracking-[0.35em] uppercase text-neutral-300 font-sans-clean">
+              {STUDIO_INFO.heroTag}
+            </p>
+          </div>
 
           {/* Main Title */}
           <h1 className="font-serif-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-light tracking-[0.12em] text-white uppercase leading-none mb-6 md:mb-8 drop-shadow-lg">

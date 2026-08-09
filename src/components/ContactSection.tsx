@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Clock, Send, Instagram, MessageCircle } from 'lucide-react';
 import { STUDIO_INFO } from '../data/studioData';
+import { LogoIcon } from './LogoIcon';
 
 interface ContactSectionProps {
   onOpenBooking: () => void;
@@ -19,9 +20,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
           {/* Left Info Column */}
           <div className="lg:col-span-6 flex flex-col justify-between space-y-8">
             <div>
-              <p className="text-[11px] tracking-[0.35em] uppercase text-neutral-400 font-sans-clean mb-4">
-                СВЯЗАТЬСЯ С НАМИ
-              </p>
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-7 h-7 text-white/90">
+                  <LogoIcon className="w-full h-full text-white" />
+                </div>
+                <p className="text-[11px] tracking-[0.35em] uppercase text-neutral-400 font-sans-clean">
+                  СВЯЗАТЬСЯ С НАМИ
+                </p>
+              </div>
               <h2 className="font-serif-display text-4xl md:text-6xl font-light text-white mb-6">
                 КОНТАКТЫ
               </h2>

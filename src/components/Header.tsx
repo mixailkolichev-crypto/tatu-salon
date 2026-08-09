@@ -8,6 +8,7 @@ import {
   IconCalendarEvent,
 } from '@tabler/icons-react';
 import { FloatingDock, DockItem } from './ui/floating-dock';
+import { LogoIcon } from './LogoIcon';
 
 interface HeaderProps {
   onOpenBooking: () => void;
@@ -89,14 +90,19 @@ export const Header: React.FC<HeaderProps> = ({
             e.preventDefault();
             scrollToSection('hero');
           }}
-          className="group flex flex-col cursor-pointer select-none z-10"
+          className="group flex items-center space-x-3 cursor-pointer select-none z-10"
         >
-          <span className="font-serif-display text-lg md:text-xl tracking-[0.35em] uppercase text-white font-light group-hover:text-neutral-300 transition-colors">
-            С К У Л Ь П Т У Р А
-          </span>
-          <span className="text-[9px] md:text-[10px] tracking-[0.45em] uppercase text-neutral-400 font-sans-clean font-normal mt-0.5">
-            ТАТУ СТУДИЯ
-          </span>
+          <div className="w-9 h-9 md:w-10 md:h-10 text-white group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
+            <LogoIcon className="w-full h-full text-white" />
+          </div>
+          <div className="flex flex-col">
+            <span className="font-serif-display text-base md:text-lg tracking-[0.3em] uppercase text-white font-light group-hover:text-neutral-300 transition-colors leading-none">
+              С К У Л Ь П Т У Р А
+            </span>
+            <span className="text-[8px] md:text-[9px] tracking-[0.4em] uppercase text-neutral-400 font-sans-clean font-normal mt-1">
+              ТАТУ СТУДИЯ
+            </span>
+          </div>
         </a>
 
         {/* Floating Dock Navigation - Central Header */}
